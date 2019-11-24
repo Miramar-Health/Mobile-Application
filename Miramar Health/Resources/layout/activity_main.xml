@@ -1,0 +1,115 @@
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation = "vertical"
+    android:background="#3A5FCD">
+    <ImageView
+        android:src="@drawable/icone"
+        android:layout_width="match_parent"
+        android:layout_height="153.0dp"
+        android:id="@+id/imageView1" />
+
+    <TextView
+        android:text="Mensurador de feridas"
+        android:layout_width="match_parent"
+        android:layout_height="36.5dp"
+        android:textSize = "40px"
+        android:textColor = "#fff28f18"
+        android:textAlignment = "center"
+        android:id="@+id/textesqueceu_main"
+        android:layout_marginBottom="15.5dp"
+        android:layout_marginLeft="0.0dp"
+        android:textStyle="bold" 
+    />
+    <TextView
+        android:text="O avaliador de feridas mais proximo de voce"
+        android:layout_width="match_parent"
+        android:layout_height="32.0dp"
+        android:textSize = "25px"
+        android:textColor = "@android:color/white"
+        android:textAlignment = "center"
+        android:id="@+id/txtavaliadormain"
+        android:textStyle="bold"
+    />
+
+    <EditText
+        android:inputType="textEmailAddress"
+        android:layout_width="261.0dp"
+        android:layout_height="39.5dp"
+        android:textColor = "#000000"
+        android:hint = "E-MAIL"
+        android:textSize="30px"
+        android:textAlignment = "center"
+        android:id="@+id/edt_email_main"
+        android:layout_margin = "10px"
+        android:textColorHint = "@android:color/white"
+        android:textStyle="bold"
+        android:background="#8DB6CD"
+        android:layout_gravity = "center_horizontal"
+    />
+    <EditText
+        android:inputType="textPassword"
+        android:layout_width="261.0dp"
+        android:layout_height="39.5dp"
+        android:textColor = "#000"
+        android:hint = "SENHA"
+        android:textSize ="30px"
+        android:background = "#8DB6CD"
+        android:textColorHint = "@android:color/white"
+        android:id="@+id/edt_senha_main"
+        android:layout_margin = "10px"
+        android:textAlignment = "center"
+        android:textStyle="bold"
+        android:layout_marginLeft="0.0dp"
+        android:layout_gravity = "center_horizontal"
+    />
+   
+    />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity = "center">
+        <Button
+            android:text="Entrar"
+            android:textColor = "@android:color/white"
+            android:layout_width="277.5dp"
+            android:layout_height="wrap_content"
+            android:layout_margin = "10px"
+            android:id="@+id/btn_entrar_main"
+            android:backgroundTint="#fff28f18"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+    <TextView
+        android:text="Esqueceu seu cadastro ?"
+        android:layout_width="match_parent"
+        android:layout_height="90.5dp"
+        android:textSize = "30px"
+        android:textColor = "@android:color/white"
+        android:textAlignment = "center"
+        android:id="@+id/textesqueceu_main"
+        android:layout_marginLeft="0.0dp" 
+    />
+    <TextView
+        android:text="Nao tem cadastro ? Cadastre-se aqui"
+        android:layout_width="384.5dp"
+        android:layout_height="53.5dp"
+        android:textSize = "30px"
+        android:textColor = "@android:color/white"
+        android:textAlignment = "center"
+        android:paddingTop = "50px"
+        android:id="@+id/textview_main"
+        android:layout_marginBottom="37.5dp"
+        android:layout_marginLeft="0.0dp"
+        android:layout_marginTop="0.0dp" 
+    /> 
+   
+
+
+
+</LinearLayout>

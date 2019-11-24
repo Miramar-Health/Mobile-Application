@@ -1,0 +1,144 @@
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation = "vertical"
+     android:background="@color/material_grey_300">
+    <EditText
+        android:inputType="textPersonName"
+        android:layout_width="match_parent"
+        android:layout_height="32.5dp"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:hint =" Nome Completo"
+        android:textColorHint = "@android:color/black"
+        android:textStyle = "bold"
+        android:background = "#1E90FF"
+        android:layout_marginTop="60px"
+        android:layout_marginBottom="15px"
+        android:layout_marginLeft="15px"
+        android:layout_marginRight="15px"
+        android:id="@+id/edt_nome_registrar" />
+    <EditText
+        android:inputType="textEmailAddress"
+        android:layout_width="match_parent"
+        android:layout_height="32.5dp"
+        android:hint =" E-mail "
+         android:textColorHint = "@android:color/black"
+        android:textStyle ="bold"
+        android:background ="#1E90FF"
+        android:layout_margin =" 15px"
+        android:id="@+id/edt_email_registrar" />
+    <EditText
+        android:inputType="phone"
+        android:layout_width="match_parent"
+        android:layout_height="32.5dp"
+        android:hint=" Celular"
+        android:textColorHint = "@android:color/black"
+        android:textStyle="bold"
+        android:background ="#1E90FF"
+        android:layout_margin =" 15px"
+        android:id="@+id/edt_telefone_registrar" />
+    <EditText
+        android:inputType="textMultiLine"
+        android:layout_width="match_parent"
+        android:layout_height="32.5dp"
+        android:hint=" Categoria"
+         android:textColorHint = "@android:color/black"
+        android:textStyle="bold"
+        android:background="#1E90FF"
+        android:layout_margin="15px"
+        android:id="@+id/edt_categoria_registrar"
+    />
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation = "horizontal">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation = "horizontal"
+            android:gravity="center"
+            android:layout_weight = "1">
+            <EditText
+                android:inputType="number"
+                android:layout_width="155.0dp"
+                android:layout_height="32.5dp"
+                android:hint="N coren"
+                android:textColorHint = "@android:color/black"
+                android:gravity="center"
+                android:layout_margin="15px"
+                android:textStyle="bold"
+                android:background="#1E90FF"
+                android:id="@+id/edt_coren_registrar" />
+            <EditText
+                android:inputType="textMultiLine"
+                android:layout_width="155.0dp"
+                android:layout_height="32.5dp"
+                android:hint="Estado"
+                android:textColorHint = "@android:color/black"
+                android:gravity="center"
+                android:layout_margin="15px"
+                android:textStyle="bold"
+                android:background="#1E90FF"
+                android:id="@+id/editText6" />
+        </LinearLayout>
+        
+    </LinearLayout>
+   
+    
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="32.5dp"
+        android:id="@+id/spn_instituicao_registar" />
+    <EditText
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:layout_height="32.5dp"
+        android:hint=" CPF"
+        android:textColorHint = "@android:color/black"
+        android:textStyle="bold"
+        android:background="#1E90FF"
+        android:layout_margin="15px"
+        android:id="@+id/edt_cpf_registrar" />
+    <EditText
+        android:inputType="textPassword"
+        android:layout_width="match_parent"
+        android:layout_height="32.5dp"
+        android:hint=" Criar Senha"
+         android:textColorHint = "@android:color/black"
+        android:textStyle="bold"
+        android:background="#1E90FF"
+        android:layout_margin="15px"
+        android:id="@+id/edt_senha_registrar" />
+    <EditText
+        android:inputType="textPassword"
+        android:layout_width="match_parent"
+        android:layout_height="32.5dp"
+        android:hint=" Confirmar Senha"
+        android:textStyle="bold"
+        android:textColorHint = "@android:color/black"
+        android:background="#1E90FF"
+        android:layout_margin="15px"
+        android:id="@+id/edt_confirmarsenha_registrar" />
+    <LinearLayout
+         android:orientation="vertical"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:gravity = "center">
+        <Button
+            android:text="Continuar"
+            android:textColor = "@android:color/white"
+            android:layout_width="299.5dp"
+            android:layout_height="62.5dp"
+            android:layout_margin = "10px"
+            android:id="@+id/btn_continuar_registar"
+            android:backgroundTint="#fff28f18"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</LinearLayout>
