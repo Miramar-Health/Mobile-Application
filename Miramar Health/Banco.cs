@@ -23,11 +23,11 @@ namespace Miramar_Health
         public MySqlCommand Conectar()
         {
             MySqlCommand comm;
-            b.Server = "";
-            b.UserID = "";
-            b.Database = "";
+            b.Server = "127.0.0.1";
+            b.UserID = "root";
+            b.Database = "enfermagemdb";
             b.Port = 3306;
-            b.Password = "";
+            b.Password = "usbw";
             try
             {
                 MySqlConnection cn = new MySqlConnection(b.ToString());

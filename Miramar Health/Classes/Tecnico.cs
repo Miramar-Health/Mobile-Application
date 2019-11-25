@@ -100,10 +100,11 @@ namespace Miramar_Health.Classes
         }
         public bool LogarTecnico(string _email, string _senha)
         {
+            db = new Banco();
             var comm = db.Conectar();
             try
             {
-                comm.CommandText = "select * from Tecnico where email = '" + _email + "' and senha = '" + _senha + "'";
+                comm.CommandText = "select * from tecnico where email = '" + _email + "' and senha = '" + _senha + "'";
                 var dr = comm.ExecuteReader();
                 if (Situacao == true)
                 {
