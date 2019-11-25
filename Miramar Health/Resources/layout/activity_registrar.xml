@@ -135,7 +135,7 @@
             android:layout_width="299.5dp"
             android:layout_height="62.5dp"
             android:layout_margin = "10px"
-            android:id="@+id/btn_continuar_registar"
+            android:id="@+id/btn_continuar_registrar"
             android:backgroundTint="#fff28f18"
             android:textStyle="bold" />
 

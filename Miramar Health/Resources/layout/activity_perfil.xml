@@ -4,4 +4,111 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+<LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="65.0dp"
+        android:background="#fff26d18"
+        android:gravity="center"
+        android:id="@+id/linearLayout1">
+        <TextView
+            android:text="PERFIL"
+            android:textSize="60px"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/textView1" />
+        
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity=""
+        android:id="@+id/linearLayout15">
+
+        <ImageView
+            android:src="@drawable/profile"
+            android:layout_width="154.5dp"
+            android:layout_height="163.0dp"
+            android:id="@+id/imageView1"
+            android:layout_marginBottom="0.0dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="121.0dp" />
+
+        <ImageButton
+            android:src="@android:drawable/ic_menu_gallery"
+            android:layout_width="wrap_content"
+            android:layout_height="60.5dp"
+            android:layout_gravity="bottom"
+            android:id="@+id/imgbtn_alterar_perfil" />
+
+
+
+
+
+    </LinearLayout>
+
+    <EditText
+        android:inputType="textPersonName"
+        android:layout_width="match_parent"
+        android:layout_height="32.5dp"
+        android:hint="Nome"
+        android:gravity="center"
+        android:textColorHint="@android:color/black"
+        android:layout_margin="15px"
+         android:background="#1E90FF"
+        android:id="@+id/edt_nome_perfil" />
+    <EditText
+        android:inputType="textEmailAddress"
+        android:layout_width="match_parent"
+        android:layout_height="32.5dp"
+         android:hint="Email"
+        android:gravity="center"
+        android:textColorHint="@android:color/black"
+        android:layout_margin="15px"
+         android:background="#1E90FF"
+        android:id="@+id/edt_email_perfil" />
+    <EditText
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:layout_height="32.5dp"
+         android:hint="Coren"
+        android:gravity="center"
+        android:textColorHint="@android:color/black"
+        android:layout_margin="15px"
+         android:background="#1E90FF"
+        android:id="@+id/edt_coren_perfil" />
+    <EditText
+        android:inputType="textMultiLine"
+        android:layout_width="match_parent"
+        android:layout_height="32.5dp"
+         android:hint="Categoria"
+        android:gravity="center"
+        android:textColorHint="@android:color/black"
+        android:layout_margin="15px"
+         android:background="#1E90FF"
+        android:id="@+id/edt_categoria_perfil" />
+    <EditText
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:layout_height="32.5dp"
+         android:hint="CPF"
+        android:gravity="center"
+        android:textColorHint="@android:color/black"
+        android:layout_margin="15px"
+         android:background="#1E90FF"
+        android:id="@+id/edt_cpf_perfil" />
+
+   
+    
+
 </LinearLayout>

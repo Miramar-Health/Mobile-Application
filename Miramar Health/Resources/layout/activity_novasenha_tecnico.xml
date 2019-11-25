@@ -3,59 +3,43 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#3A5FCD">
+     android:background="#3A5FCD">
 
-     <ImageView
+    <ImageView
         android:src="@drawable/icone"
         android:layout_width="match_parent"
         android:layout_height="153.0dp"
         android:layout_marginBottom="80.0dp"
         android:id="@+id/imageView1" />
 
-       <EditText
-        android:inputType="textEmailAddress"
+     <EditText
+        android:inputType="textPassword"
         android:layout_width="261.0dp"
         android:layout_height="39.5dp"
-        android:textColor = "#000000"
-        android:hint = "Email Cadastrado"
-        android:textSize="30px"
-        android:textAlignment = "center"
-        android:id="@+id/edt_email_recuperarsenha"
-        android:layout_margin = "10px"
+        android:textColor = "#000"
+        android:hint = "Digitie uma nova Senha"
+        android:textSize ="30px"
+        android:background = "#8DB6CD"
         android:textColorHint = "@android:color/black"
-        android:background="#8DB6CD"
+        android:id="@+id/edt_senha_novasenha"
+        android:layout_margin = "10px"
+        android:textAlignment = "center"
+        android:layout_marginLeft="0.0dp"
         android:layout_gravity = "center_horizontal"
     />
-        
-        <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity = "center">
-        <Button
-            android:text="Enviar codigo de recuperação"
-            android:textColor = "@android:color/black"
-            android:layout_width="266.5dp"
-            android:layout_height="wrap_content"
-            android:layout_margin = "10px"
-            android:id="@+id/btn_enviarcodigo_recuperarsenha"
-            android:backgroundTint="#fff28f18"
-            />
-
-    </LinearLayout>
-
-    <EditText
-        android:inputType="number"
+         <EditText
+        android:inputType="textPassword"
         android:layout_width="261.0dp"
         android:layout_height="39.5dp"
-        android:textColor = "#000000"
-        android:hint = "Digite o codigo"
-        android:textSize="30px"
-        android:textAlignment = "center"
-        android:id="@+id/edt_codigo_recuperarsenha"
-        android:layout_margin = "10px"
+        android:textColor = "#000"
+        android:hint = "Confirmar Nova Senha"
+        android:textSize ="30px"
+        android:background = "#8DB6CD"
         android:textColorHint = "@android:color/black"
-        android:background="#8DB6CD"
+        android:id="@+id/edt_confirmar_novasenha"
+        android:layout_margin = "10px"
+        android:textAlignment = "center"
+        android:layout_marginLeft="0.0dp"
         android:layout_gravity = "center_horizontal"
     />
 
@@ -65,12 +49,12 @@
         android:layout_height="wrap_content"
         android:gravity = "center">
         <Button
-            android:text="validar"
+            android:text="alterar"
             android:textColor = "@android:color/black"
             android:layout_width="266.5dp"
             android:layout_height="wrap_content"
             android:layout_margin = "10px"
-            android:id="@+id/btn_validar_recuperarsenha"
+            android:id="@+id/btn_alterar_novasenha"
             android:backgroundTint="#fff28f18"
             />
 
@@ -80,7 +64,7 @@
             android:layout_width="266.5dp"
             android:layout_height="wrap_content"
             android:layout_margin = "10px"
-            android:id="@+id/btn_voltar_recuperarsenha"
+            android:id="@+id/btn_voltar_novasenha"
             android:backgroundTint="#fff28f18"
             />
 

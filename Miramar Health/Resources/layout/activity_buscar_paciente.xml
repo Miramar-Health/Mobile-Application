@@ -2,6 +2,100 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/material_grey_300">
+   
+        <TextView
+        android:text="Buscar"
+        android:textColor="@android:color/black"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15px"
+        android:layout_marginLeft="15px"
+        android:id="@+id/textView1" />
+
+    
+
+    <EditText
+        android:inputType="textPersonName"
+        android:layout_width="128.5dp"
+        android:layout_height="wrap_content"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:background="#1E90FF"
+        android:layout_marginLeft="15px"
+        android:layout_marginBottom="15px"
+        android:id="@+id/edt_nomebuscar_buscar" />
+
+    <EditText
+        android:inputType="textMultiLine"
+        android:layout_width="match_parent"
+        android:layout_height="32.5dp"
+        android:hint="Nome Paciente"
+        android:textColorHint="@android:color/black"
+        android:gravity="center"
+        android:background="#1E90FF"
+        android:layout_margin="15px"
+        android:id="@+id/edt_nomepaciente_buscar" />
+
+     <EditText
+        android:inputType="textMultiLine"
+        android:layout_width="match_parent"
+        android:layout_height="32.5dp"
+        android:hint="Região da Ferida"
+        android:textColorHint="@android:color/black"
+        android:gravity="center"
+        android:background="#1E90FF"
+        android:layout_margin="15px"
+        android:id="@+id/edt_regiaoferida_atendimento" />
+    <EditText
+        android:inputType="textMultiLine"
+        android:layout_width="match_parent"
+        android:layout_height="69.0dp"
+        android:background="#1E90FF"
+        android:hint="Descrição Ferida"
+        android:textColorHint="@android:color/black"
+        android:gravity="center"
+        android:layout_margin="15px"
+        android:id="@+id/edt_descricaoferida_iniciar" />
+    <EditText
+        android:inputType="textMultiLine"
+        android:layout_width="match_parent"
+        android:layout_height="32.5dp"
+        android:background="#1E90FF"
+        android:hint="Cobertura Utilizada"
+        android:textColorHint="@android:color/black"
+        android:layout_margin="15px"
+        android:gravity="center"
+        android:id="@+id/edt_cobertura_atendimento" />
+   
+    <TextView
+        android:text="Imagem"
+        android:layout_width="match_parent"
+        android:layout_height="32.5dp"
+        android:textColor="@android:color/black"
+        android:background="#1E90FF"
+        android:gravity="center"
+        android:layout_margin="15px"
+        android:id="@+id/textView2" />
+
+     <LinearLayout
+         android:orientation="vertical"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:gravity = "center">
+        <Button
+            android:text="Voltar"
+            android:textColor = "@android:color/white"
+            android:layout_width="213.5dp"
+            android:layout_height="62.5dp"
+            android:layout_margin = "10px"
+            android:id="@+id/btn_voltar_buscar"
+            android:backgroundTint="#fff28f18"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
 
 </LinearLayout>

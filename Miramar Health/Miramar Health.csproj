@@ -71,6 +71,7 @@
     <Compile Include="IniciarAtendimentoActivity.cs" />
     <Compile Include="CadastrarPacienteActivity.cs" />
     <Compile Include="MainActivity.cs" />
+    <Compile Include="NovaSenhaActivity.cs" />
     <Compile Include="PerfilActivity.cs" />
     <Compile Include="RecuperarSenhaActivity.cs" />
     <Compile Include="RegistrarActivity.cs" />
@@ -168,6 +169,11 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\profile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\activity_novasenha_tecnico.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

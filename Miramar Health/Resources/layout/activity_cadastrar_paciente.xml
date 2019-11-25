@@ -2,6 +2,92 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/material_grey_300">
+
+     <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="65.0dp"
+        android:background="#fff26d18"
+        android:id="@+id/linearLayout1">
+        <ImageView
+            android:src="@android:drawable/ic_menu_gallery"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/imageView1" />
+        <ImageButton
+            android:src="@android:drawable/ic_menu_gallery"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="450px"
+            android:id="@+id/imageButton1" />
+    </LinearLayout>
+
+    <EditText
+        android:inputType="textPersonName"
+        android:layout_width="match_parent"
+        android:layout_height="32.5dp"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:background="#1E90FF"
+        android:hint="Nome do Paciente"
+        android:textColorHint="@android:color/black"
+        android:gravity="center"
+        android:layout_marginTop="30px"
+        android:layout_marginBottom="15px"
+        android:layout_marginLeft="15px"
+        android:layout_marginRight="15px"
+        android:id="@+id/edt_nome_cadastrarpaciente" />
+    <EditText
+        android:inputType="textMultiLine"
+        android:layout_width="match_parent"
+        android:layout_height="32.5dp"
+         android:background="#1E90FF"
+        android:layout_margin="15px"
+        android:hint="Local da Ferida"
+        android:gravity="center"
+        android:textColorHint="@android:color/black"
+        android:id="@+id/edt_localferida_cadastrarpaciente" />
+    <EditText
+        android:inputType="textMultiLine"
+        android:layout_width="match_parent"
+        android:layout_height="127.0dp"
+        android:layout_margin="15px"
+        android:hint="Descrição Inicial da Ferida"
+        android:textColorHint="@android:color/black"
+        android:background="#1E90FF"
+        android:gravity="center"
+        android:id="@+id/editText3" />
+
+        
+     <LinearLayout
+         android:orientation="vertical"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:gravity = "center">
+        <Button
+            android:text="cadastrar"
+            android:textColor = "@android:color/white"
+            android:layout_width="299.5dp"
+            android:layout_height="62.5dp"
+            android:layout_margin = "10px"
+            android:id="@+id/btn_cadastrar_paciente"
+            android:backgroundTint="#fff28f18"
+            android:textStyle="bold" />
+
+         <Button
+            android:text="voltar"
+            android:textColor = "@android:color/white"
+            android:layout_width="299.5dp"
+            android:layout_height="62.5dp"
+            android:layout_margin = "10px"
+            android:id="@+id/btn_voltar_paciente"
+            android:backgroundTint="#fff28f18"
+            android:textStyle="bold" />
+
+    </LinearLayout>
 
 </LinearLayout>
