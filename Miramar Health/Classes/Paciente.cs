@@ -14,7 +14,7 @@ namespace Miramar_Health.Classes
         public string Descricao_inicial_ferida { get; set; }
         public DateTime Data_cadastro { get; set; }
         public Endereco End { get; set; }
-        Banco db;
+        Banco db= new Banco();
 
 
         public Paciente ()
@@ -31,6 +31,7 @@ namespace Miramar_Health.Classes
         }
         public void InserirPaciente(string nome, string local_ferida, string descricao_ferida, DateTime data_cadastro, Endereco endereco)
         {
+            db = new Banco();
             var comm = db.Conectar();
             try
             {
