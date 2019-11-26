@@ -16,12 +16,12 @@ namespace Miramar_Health.Classes
         public string Coren { get; set; }
         public string Email { get; set; }
         public string Senha { get; set; }
-        public bool Situacao { get; set; }
+        public int Situacao { get; set; }
         public string Celular { get; set; } 
         
         Banco db;
         /*------------------ Métodos Construtores da classe Tecnico -------------*/
-        public Tecnico(int id, string nome, string cpf, string categoria, string coren, string email, string senha, bool situacao, string celular)
+        public Tecnico(int id, string nome, string cpf, string categoria, string coren, string email, string senha, int situacao, string celular)
         {
             Id_Tecnico = id;
             Nome = nome;
@@ -106,8 +106,8 @@ namespace Miramar_Health.Classes
             {
                 comm.CommandText = "select * from tecnico where email = '" + _email + "' and senha = '" + _senha + "'";
                 var dr = comm.ExecuteReader();
-                if (Situacao == true)
-                {
+                
+                
                     if (dr.Read())
                     {
                         Id_Tecnico = dr.GetInt32(0);
@@ -121,11 +121,7 @@ namespace Miramar_Health.Classes
                         return false;
                     }
 
-                }
-                else
-                {
-                    return false;
-                }
+          
                 
             }
             catch (Exception ex)

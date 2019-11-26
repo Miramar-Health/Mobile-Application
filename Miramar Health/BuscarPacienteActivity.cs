@@ -18,6 +18,7 @@ namespace Miramar_Health
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
+            SetContentView(Resource.Layout.activity_buscar_paciente);
 
             // Create your application here
         }

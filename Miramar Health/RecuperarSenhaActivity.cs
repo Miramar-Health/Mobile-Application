@@ -18,8 +18,15 @@ namespace Miramar_Health
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
+            SetContentView(Resource.Layout.activity_recuperar_senha);
+            Button btnVoltar = (Button)FindViewById(Resource.Id.btn_voltar_recuperarsenha);
 
             // Create your application here
+
+            btnVoltar.Click += delegate
+            {
+                SetContentView(Resource.Layout.activity_main);
+            };
         }
     }
 }

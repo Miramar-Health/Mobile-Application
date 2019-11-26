@@ -42,7 +42,7 @@
             android:id="@+id/imageView1"
             android:layout_marginBottom="0.0dp"
             android:layout_gravity="center"
-            android:layout_marginLeft="121.0dp" />
+            android:layout_marginLeft="105.0dp" />
 
         <ImageButton
             android:src="@android:drawable/ic_menu_gallery"
@@ -107,6 +107,34 @@
         android:layout_margin="15px"
          android:background="#1E90FF"
         android:id="@+id/edt_cpf_perfil" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity = "center"
+         android:id="@+id/linearlayoutbotton_perfil">
+        <Button
+            android:text="desconectar"
+            android:textColor = "@android:color/black"
+            android:layout_width="277.5dp"
+            android:layout_height="wrap_content"
+            android:layout_margin = "10px"
+            android:id="@+id/btn_desconectar_perfil"
+            android:backgroundTint="#fff28f18"
+            android:textStyle="bold" />
+
+        <Button
+            android:text="Voltar"
+            android:textColor = "@android:color/black"
+            android:layout_width="277.5dp"
+            android:layout_height="wrap_content"
+            android:layout_margin = "10px"
+            android:id="@+id/btn_voltar_perfil"
+            android:backgroundTint="#fff28f18"
+            android:textStyle="bold" />
+
+    </LinearLayout>
 
    
     

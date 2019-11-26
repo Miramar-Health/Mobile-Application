@@ -10,6 +10,7 @@ using Miramar_Health.Classes;
 using System.IO;
 
 
+
 namespace Miramar_Health
 {
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true)]
@@ -68,6 +69,7 @@ namespace Miramar_Health
             EditText edtEmail = (EditText)FindViewById(Resource.Id.edt_email_main);
             EditText edtSenha = (EditText)FindViewById(Resource.Id.edt_senha_main);
             TextView textEsqueceu = (TextView)FindViewById(Resource.Id.textesqueceu_main);
+            TextView textNaotem = (TextView)FindViewById(Resource.Id.textView10);
             btnEntrar.Click += delegate
             {
                 tec = new Tecnico();
@@ -87,8 +89,19 @@ namespace Miramar_Health
                     Toast.MakeText(this, "Email ou Senha Incorreto !!  \n Tente Novamente !", ToastLength.Long).Show();
                 }
 
+                
             };
+            textEsqueceu.Click += delegate
+            {
+                StartActivity(typeof(RecuperarSenhaActivity));
+            };
+
+            textNaotem.Click += delegate
+            {
+                StartActivity(typeof(RegistrarActivity));
+            };
+
         }
-        
+
     }
 }

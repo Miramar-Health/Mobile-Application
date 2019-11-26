@@ -10,6 +10,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 
+
 namespace Miramar_Health
 {
     [Activity(Label = "HomeActivity")]
@@ -21,6 +22,33 @@ namespace Miramar_Health
             SetContentView(Resource.Layout.activity_home);
 
             // Create your application here
+            Button btnIniciarAtendimento = (Button)FindViewById(Resource.Id.btn_iniciaratendimento_home);
+            Button btnCadastrarPaciente = (Button)FindViewById(Resource.Id.btn_cadastrarpaciente_home);
+            Button btnBuscarPaciente = (Button)FindViewById(Resource.Id.btn_buscarpaciente_home);
+            ImageButton imgbtnPerfil = (ImageButton)FindViewById(Resource.Id.imageButton1);
+
+            btnIniciarAtendimento.Click += delegate
+            {
+                StartActivity(typeof(IniciarAtendimentoActivity));
+            };
+
+            btnCadastrarPaciente.Click += delegate
+            {
+                StartActivity(typeof(CadastrarPacienteActivity));
+            };
+
+            btnBuscarPaciente.Click += delegate
+            {
+                StartActivity(typeof(BuscarPacienteActivity));
+            };
+
+            imgbtnPerfil.Click += delegate
+            {
+                StartActivity(typeof(PerfilActivity));
+            };
+
+
+
         }
     }
 }
