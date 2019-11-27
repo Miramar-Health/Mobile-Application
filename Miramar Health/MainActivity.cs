@@ -39,7 +39,7 @@ namespace Miramar_Health
                 {
                     foreach (var i in a.Result)
                     {
-                        if (i.Sessao)
+                        if (i.Sessao == true)
                         {
                             st = new SessaoTecnico();
                             StartActivity(typeof(HomeActivity));
@@ -54,6 +54,7 @@ namespace Miramar_Health
                     st = new SessaoTecnico
                     {
                         Sessao = false
+                        
                     };
                     BancoLocal.InserirSessao(st);
                 }
@@ -62,6 +63,7 @@ namespace Miramar_Health
             {
                 ex.Message.ToString();
             }
+            
           
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.activity_main);

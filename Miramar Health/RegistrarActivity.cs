@@ -9,18 +9,53 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Miramar_Health.Classes;
 
 namespace Miramar_Health
 {
     [Activity(Label = "RegistrarActivity")]
     public class RegistrarActivity : Activity
     {
+        Categoria Cat;
+        List<Categoria> ListCat;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.activity_registrar);
+            EditText edtNome = (EditText)FindViewById(Resource.Id.edt_nome_registrar);
+            EditText edtEmail = (EditText)FindViewById(Resource.Id.edt_email_registrar);
+            EditText edtCelular = (EditText)FindViewById(Resource.Id.edt_telefone_registrar);
+            Spinner spnCategoria = (Spinner)FindViewById(Resource.Id.spn_categoria_registrar);
+            EditText edtCoren = (EditText)FindViewById(Resource.Id.edt_coren_registrar);
+            EditText edtEstado = (EditText)FindViewById(Resource.Id.editText6);
+            EditText edtCpf = (EditText)FindViewById(Resource.Id.edt_cpf_registrar);
+            EditText edtSenha = (EditText)FindViewById(Resource.Id.edt_senha_registrar);
+            EditText edtConfimarSenha = (EditText)FindViewById(Resource.Id.edt_confirmarsenha_registrar);
+            Button btnContinuar = (Button)FindViewById(Resource.Id.btn_continuar_registrar);
+
+
 
             // Create your application here
+            //inserindo categorias dentro do spinner
+            Cat = new Categoria();
+            ListCat = new List<Categoria>();
+            ListCat = Cat.GerarLista();
+            List<string> lCat = new List<string>();
+            foreach (var item in ListCat)
+            {
+                lCat.Add(item.Categoriaa);
+            }
+            ArrayAdapter adapterCat = new ArrayAdapter(this, Android.Resource.Layout.SimpleSpinnerItem, lCat);
+            spnCategoria.Adapter = adapterCat;
+            spnCategoria.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(Spinner_itemselecionado_Categoria);
+
+        }
+        public void Spinner_itemselecionado_Categoria(object sender, AdapterView.ItemSelectedEventArgs lCat)
+        {
+            Cat = new Categoria();
+            Toast.MakeText(this, "Categoria : " + ListCat[lCat.Position].Categoriaa.ToString(), ToastLength.Long).Show();
+            Cat.Id_Categoria = ListCat[lCat.Position].Id_Categoria;
+            Cat.Categoriaa = ListCat[lCat.Position].Categoriaa;
         }
     }
 }

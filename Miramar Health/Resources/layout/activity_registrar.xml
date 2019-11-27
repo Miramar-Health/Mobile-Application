@@ -42,17 +42,13 @@
         android:background ="#1E90FF"
         android:layout_margin =" 15px"
         android:id="@+id/edt_telefone_registrar" />
-    <EditText
-        android:inputType="textMultiLine"
+    <Spinner
         android:layout_width="match_parent"
-        android:layout_height="32.5dp"
-        android:hint=" Categoria"
-         android:textColorHint = "@android:color/black"
-        android:textStyle="bold"
-        android:background="#1E90FF"
-        android:layout_margin="15px"
-        android:id="@+id/edt_categoria_registrar"
-    />
+        android:layout_height="wrap_content"
+        android:id="@+id/spn_categoria_registrar" />
+    
+
+
       <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -90,10 +86,7 @@
     </LinearLayout>
    
     
-    <Spinner
-        android:layout_width="match_parent"
-        android:layout_height="32.5dp"
-        android:id="@+id/spn_instituicao_registar" />
+   
     <EditText
         android:inputType="number"
         android:layout_width="match_parent"
@@ -124,6 +117,12 @@
         android:background="#1E90FF"
         android:layout_margin="15px"
         android:id="@+id/edt_confirmarsenha_registrar" />
+
+     <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="32.5dp"
+        android:id="@+id/spn_instituicao_registar" />
+
     <LinearLayout
          android:orientation="vertical"
          android:layout_width="match_parent"

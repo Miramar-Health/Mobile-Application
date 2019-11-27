@@ -21,7 +21,14 @@ namespace Miramar_Health
         static BancoSqLite bancoLocal;
         public static BancoSqLite BancoLocal
         {
-            get;
+            get
+            {
+                if (bancoLocal == null)
+                {
+                    bancoLocal = new BancoSqLite(Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.LocalApplicationData), "BancoSqLite.enfermagemdb"));
+                }
+                return bancoLocal;
+            }
         }
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -33,7 +40,25 @@ namespace Miramar_Health
 
 
             // Create your application here
-           
+            btnDesconectar.Click += delegate
+             {
+                 SessaoTecnico st;
+                 foreach (var item in BancoLocal.ObterListaSessao().Result)
+                 {
+                     st = new SessaoTecnico();
+                     if (item.Sessao == true)
+                     {
+                         StartActivity(typeof(MainActivity));
+                         st.Sessao = false;
+                         st.Id = 1;
+                         st.Tecnico = null;
+                         bancoLocal.SalvarSessaoTecnico(st);
+                         Finish();
+                        
+                     }
+                    
+                 }
+             };
         }
     }
 }

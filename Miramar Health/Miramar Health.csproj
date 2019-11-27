@@ -64,6 +64,7 @@
     <Compile Include="Banco.cs" />
     <Compile Include="BuscarPacienteActivity.cs" />
     <Compile Include="Classes\BancoSqLite.cs" />
+    <Compile Include="Classes\Categoria.cs" />
     <Compile Include="Classes\Endereco.cs" />
     <Compile Include="Classes\Paciente.cs" />
     <Compile Include="Classes\SessaoTecnico.cs" />
