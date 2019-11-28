@@ -13,22 +13,23 @@ namespace Miramar_Health.Classes
         public string Local_ferida { get; set; }
         public string Descricao_inicial_ferida { get; set; }
         public DateTime Data_cadastro { get; set; }
-        public Endereco End { get; set; }
+        public Tecnico Id_Tecnico { get; set; }
         Banco db= new Banco();
 
 
         public Paciente ()
         { }
 
-        public Paciente(int id, string nome, string local_ferida, string descricao_ferida, DateTime data_cadastro)
+        public Paciente(int id, string nome, string local_ferida, string descricao_ferida, DateTime data_cadastro, Tecnico id_tecnico)
         {
             Id_paciente = id;
             Nome = nome;
             Local_ferida = local_ferida;
             Descricao_inicial_ferida = descricao_ferida;
             Data_cadastro = data_cadastro;
+            Id_Tecnico = id_tecnico;
         }
-        public void InserirPaciente(string nome, string local_ferida, string descricao_ferida, DateTime data_cadastro)
+        public void InserirPaciente(string nome, string local_ferida, string descricao_ferida, DateTime data_cadastro, int id_tecnico)
         {
             db = new Banco();
             var comm = db.Conectar();
@@ -37,11 +38,12 @@ namespace Miramar_Health.Classes
                 if (comm.Connection.State == ConnectionState.Open)
                 {
                     comm.CommandType = CommandType.StoredProcedure;
-                    comm.CommandText = "sp_inserir_paciente";
+                    comm.CommandText = "sp_insert_paciente";
                     comm.Parameters.Add("nome", MySqlDbType.VarChar).Value = nome;
                     comm.Parameters.Add("local_ferida", MySqlDbType.VarChar).Value = local_ferida;
                     comm.Parameters.Add("descricao_inicial_ferida", MySqlDbType.VarChar).Value = descricao_ferida;
                     comm.Parameters.Add("data_cadastro", MySqlDbType.DateTime).Value = data_cadastro;
+                    comm.Parameters.Add("id_tecnico", MySqlDbType.Int32).Value = id_tecnico;
                     Id_paciente = Convert.ToInt32(comm.ExecuteScalar());
                 }
             }
@@ -93,7 +95,7 @@ namespace Miramar_Health.Classes
                     Local_ferida = dr.GetString(2);
                     Descricao_inicial_ferida = dr.GetString(3);
                     Data_cadastro = dr.GetDateTime(4);
-                    End.Id_endereco = dr.GetInt32(5);
+
                 }
             }
             catch (Exception ex)

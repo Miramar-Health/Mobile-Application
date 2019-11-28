@@ -19,7 +19,9 @@ namespace Miramar_Health
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.activity_buscar_paciente);
-
+            EditText edtBuscarNome = (EditText)FindViewById(Resource.Id.edt_nomebuscar_buscar);
+            EditText edtNomePaciente = (EditText)FindViewById(Resource.Id.edt_nomebuscar_buscar);
+            EditText edtRegiaoFerida = (EditText)FindViewById(Resource.Id.edt_regiaoferida_buscar);
             // Create your application here
         }
     }
