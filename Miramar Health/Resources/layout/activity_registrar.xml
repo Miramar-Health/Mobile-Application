@@ -14,8 +14,7 @@
         android:minWidth="25px"
         android:minHeight="25px"
         android:hint =" Nome Completo"
-        android:textColorHint = "@android:color/black"
-        android:textStyle = "bold"
+        android:textColorHint = "#4F4F4F"
         android:background = "#1E90FF"
         android:layout_marginTop="60px"
         android:layout_marginBottom="15px"
@@ -27,8 +26,7 @@
         android:layout_width="match_parent"
         android:layout_height="32.5dp"
         android:hint =" E-mail "
-         android:textColorHint = "@android:color/black"
-        android:textStyle ="bold"
+         android:textColorHint = "#4F4F4F"
         android:background ="#1E90FF"
         android:layout_margin =" 15px"
         android:id="@+id/edt_email_registrar" />
@@ -37,15 +35,15 @@
         android:layout_width="match_parent"
         android:layout_height="32.5dp"
         android:hint=" Celular"
-        android:textColorHint = "@android:color/black"
-        android:textStyle="bold"
+        android:textColorHint = "#4F4F4F"
         android:background ="#1E90FF"
         android:layout_margin =" 15px"
         android:id="@+id/edt_telefone_registrar" />
     <Spinner
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/spn_categoria_registrar" />
+        android:id="@+id/spn_categoria_registrar"
+        android:visibility="visible" />
     
 
 
@@ -60,27 +58,15 @@
             android:gravity="center"
             android:layout_weight = "1">
             <EditText
-                android:inputType="number"
+                android:inputType="text"
                 android:layout_width="155.0dp"
                 android:layout_height="32.5dp"
                 android:hint="N coren"
-                android:textColorHint = "@android:color/black"
+                android:textColorHint = "#4F4F4F"
                 android:gravity="center"
                 android:layout_margin="15px"
-                android:textStyle="bold"
                 android:background="#1E90FF"
                 android:id="@+id/edt_coren_registrar" />
-            <EditText
-                android:inputType="textMultiLine"
-                android:layout_width="155.0dp"
-                android:layout_height="32.5dp"
-                android:hint="Estado"
-                android:textColorHint = "@android:color/black"
-                android:gravity="center"
-                android:layout_margin="15px"
-                android:textStyle="bold"
-                android:background="#1E90FF"
-                android:id="@+id/editText6" />
         </LinearLayout>
         
     </LinearLayout>
@@ -92,8 +78,7 @@
         android:layout_width="match_parent"
         android:layout_height="32.5dp"
         android:hint=" CPF"
-        android:textColorHint = "@android:color/black"
-        android:textStyle="bold"
+        android:textColorHint = "#4F4F4F"
         android:background="#1E90FF"
         android:layout_margin="15px"
         android:id="@+id/edt_cpf_registrar" />
@@ -102,8 +87,7 @@
         android:layout_width="match_parent"
         android:layout_height="32.5dp"
         android:hint=" Criar Senha"
-         android:textColorHint = "@android:color/black"
-        android:textStyle="bold"
+        android:textColorHint = "#4F4F4F"
         android:background="#1E90FF"
         android:layout_margin="15px"
         android:id="@+id/edt_senha_registrar" />
@@ -112,16 +96,16 @@
         android:layout_width="match_parent"
         android:layout_height="32.5dp"
         android:hint=" Confirmar Senha"
-        android:textStyle="bold"
-        android:textColorHint = "@android:color/black"
+        android:textColorHint = "#4F4F4F"
         android:background="#1E90FF"
         android:layout_margin="15px"
         android:id="@+id/edt_confirmarsenha_registrar" />
 
-     <Spinner
+    <Spinner
         android:layout_width="match_parent"
         android:layout_height="32.5dp"
-        android:id="@+id/spn_instituicao_registar" />
+        android:id="@+id/spn_instituicao_registar"
+        android:visibility="invisible" />
 
     <LinearLayout
          android:orientation="vertical"

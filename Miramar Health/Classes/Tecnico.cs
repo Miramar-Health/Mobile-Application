@@ -12,26 +12,26 @@ namespace Miramar_Health.Classes
         public int Id_Tecnico { get; set; }
         public string Nome { get; set; }
         public string Cpf { get; set; }
-        public Categoria Categoria { get; set; }
         public string Coren { get; set; }
         public string Email { get; set; }
         public string Senha { get; set; }
-        public int Situacao { get; set; }
+        public bool Situacao { get; set; }
         public string Celular { get; set; } 
+        public Categoria Categoria { get; set; }
         
         Banco db;
         /*------------------ Métodos Construtores da classe Tecnico -------------*/
-        public Tecnico(int id, string nome, string cpf, Categoria categoria, string coren, string email, string senha, int situacao, string celular)
+        public Tecnico(int id, string nome, string cpf,  string coren, string email, string senha, bool situacao, string celular, Categoria categoria)
         {
             Id_Tecnico = id;
             Nome = nome;
             Cpf = cpf;
-            Categoria = categoria;
             Coren = coren;
             Email = email;
             Senha = senha;
             Situacao = situacao;
             Celular = celular;
+            Categoria = categoria;
             
         }
         public Tecnico()
@@ -40,7 +40,7 @@ namespace Miramar_Health.Classes
         /*------------------- Métodos da classe Tecnico -------------------------*/
 
         /*------------------- Inseririndo Usuarios -------------------*/
-        public void InserirTecnico(string nome, string cpf, Categoria categoria, string coren, string email, string senha, bool situacao, string instituicao, int celular)
+        public void InserirTecnico(string nome, string cpf, string coren, string email, string senha, bool situacao, string celular, Categoria categoria)
         {
             db = new Banco();
             var comm = db.Conectar();
@@ -52,13 +52,12 @@ namespace Miramar_Health.Classes
                     comm.CommandText = "sp_insert_tecnico";
                     comm.Parameters.Add("nome", MySqlDbType.VarChar).Value = nome;
                     comm.Parameters.Add("cpf", MySqlDbType.VarChar).Value = cpf;
-                    comm.Parameters.Add("categoria", MySqlDbType.VarChar).Value = categoria;
                     comm.Parameters.Add("coren", MySqlDbType.VarChar).Value = coren;
                     comm.Parameters.Add("email", MySqlDbType.VarChar).Value = email;
                     comm.Parameters.Add("senha", MySqlDbType.VarChar).Value = senha;
                     comm.Parameters.Add("situacao", MySqlDbType.VarChar).Value = situacao;
-                    comm.Parameters.Add("instituicao", MySqlDbType.VarChar).Value = instituicao;
                     comm.Parameters.Add("celular", MySqlDbType.VarChar).Value = celular;
+                    comm.Parameters.Add("categoria_id_categoria", MySqlDbType.Int32).Value = categoria;
                     Id_Tecnico = Convert.ToInt32(comm.ExecuteScalar());
                 }
 

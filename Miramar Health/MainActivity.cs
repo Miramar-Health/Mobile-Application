@@ -8,14 +8,17 @@ using System;
 using SQLite;
 using Miramar_Health.Classes;
 using System.IO;
-
-
+using Plugin.Media;
+using Android.Content.PM;
+using Plugin.Permissions;
 
 namespace Miramar_Health
 {
-    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true)]
+    [Activity(Label = "@string/app_name", Theme = "@style/AppTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : AppCompatActivity
     {
+
+
         static BancoSqLite bancoLocal;
         public static BancoSqLite BancoLocal
         {
@@ -31,6 +34,10 @@ namespace Miramar_Health
         Tecnico tec;
         protected override void OnCreate(Bundle savedInstanceState)
         {
+
+
+
+
             SessaoTecnico st;
             try
             {
@@ -104,6 +111,15 @@ namespace Miramar_Health
             };
 
         }
+
+        public override void OnRequestPermissionsResult(int requestCode, string[] permissions, Permission[] grantResults)
+        {
+            PermissionsImplementation.Current.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+        }
+
+
+
+
 
     }
 }

@@ -20,16 +20,15 @@ namespace Miramar_Health.Classes
         public Paciente ()
         { }
 
-        public Paciente(int id, string nome, string local_ferida, string descricao_ferida, DateTime data_cadastro, Endereco endereco)
+        public Paciente(int id, string nome, string local_ferida, string descricao_ferida, DateTime data_cadastro)
         {
             Id_paciente = id;
             Nome = nome;
             Local_ferida = local_ferida;
             Descricao_inicial_ferida = descricao_ferida;
             Data_cadastro = data_cadastro;
-            End = endereco;
         }
-        public void InserirPaciente(string nome, string local_ferida, string descricao_ferida, DateTime data_cadastro, Endereco endereco)
+        public void InserirPaciente(string nome, string local_ferida, string descricao_ferida, DateTime data_cadastro)
         {
             db = new Banco();
             var comm = db.Conectar();
@@ -40,9 +39,9 @@ namespace Miramar_Health.Classes
                     comm.CommandType = CommandType.StoredProcedure;
                     comm.CommandText = "sp_inserir_paciente";
                     comm.Parameters.Add("nome", MySqlDbType.VarChar).Value = nome;
-                    comm.Parameters.Add("descricao_inicial_ferida", MySqlDbType.VarChar).Value = local_ferida;
+                    comm.Parameters.Add("local_ferida", MySqlDbType.VarChar).Value = local_ferida;
+                    comm.Parameters.Add("descricao_inicial_ferida", MySqlDbType.VarChar).Value = descricao_ferida;
                     comm.Parameters.Add("data_cadastro", MySqlDbType.DateTime).Value = data_cadastro;
-                    comm.Parameters.Add("id_end", MySqlDbType.Int32).Value = endereco;
                     Id_paciente = Convert.ToInt32(comm.ExecuteScalar());
                 }
             }
@@ -112,7 +111,7 @@ namespace Miramar_Health.Classes
             var comm = db.Conectar();
             try
             {
-                comm.CommandText = "select * from Pacientes";
+                comm.CommandText = "select * from paciente";
                 var dr = comm.ExecuteReader();
                 while (dr.Read())
                 {
@@ -124,7 +123,7 @@ namespace Miramar_Health.Classes
                         Descricao_inicial_ferida = dr.GetString(3),
                         Data_cadastro = dr.GetDateTime(4)
                     };
-                    End.Id_endereco = dr.GetInt32(5);
+
                     lista.Add(p);
                 }
                 comm.Connection.Close();

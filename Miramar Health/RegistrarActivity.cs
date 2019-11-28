@@ -17,7 +17,9 @@ namespace Miramar_Health
     public class RegistrarActivity : Activity
     {
         Categoria Cat;
+        Tecnico tec;
         List<Categoria> ListCat;
+        
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -27,11 +29,37 @@ namespace Miramar_Health
             EditText edtCelular = (EditText)FindViewById(Resource.Id.edt_telefone_registrar);
             Spinner spnCategoria = (Spinner)FindViewById(Resource.Id.spn_categoria_registrar);
             EditText edtCoren = (EditText)FindViewById(Resource.Id.edt_coren_registrar);
-            EditText edtEstado = (EditText)FindViewById(Resource.Id.editText6);
             EditText edtCpf = (EditText)FindViewById(Resource.Id.edt_cpf_registrar);
             EditText edtSenha = (EditText)FindViewById(Resource.Id.edt_senha_registrar);
             EditText edtConfimarSenha = (EditText)FindViewById(Resource.Id.edt_confirmarsenha_registrar);
             Button btnContinuar = (Button)FindViewById(Resource.Id.btn_continuar_registrar);
+
+            btnContinuar.Click += delegate
+            {
+                tec = new Tecnico();
+                if (edtSenha.Text.Length < 6)
+                {
+                    Toast.MakeText(this, "Sua senha deve conter mais de 6 digitos", ToastLength.Long).Show();
+                }
+                else
+                {
+                    if (edtSenha.Text == edtConfimarSenha.Text)
+                    {
+
+
+                    
+                        Toast.MakeText(this, "Inserido", ToastLength.Short).Show();
+                        StartActivity(typeof(MainActivity));
+                        
+                    }
+                    else
+                    {
+                        Toast.MakeText(this, "Algo de errado não esta certo", ToastLength.Short).Show();
+                    }
+                }
+            };
+
+            
 
 
 
@@ -48,7 +76,7 @@ namespace Miramar_Health
             ArrayAdapter adapterCat = new ArrayAdapter(this, Android.Resource.Layout.SimpleSpinnerItem, lCat);
             spnCategoria.Adapter = adapterCat;
             spnCategoria.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(Spinner_itemselecionado_Categoria);
-
+            
         }
         public void Spinner_itemselecionado_Categoria(object sender, AdapterView.ItemSelectedEventArgs lCat)
         {
@@ -57,5 +85,7 @@ namespace Miramar_Health
             Cat.Id_Categoria = ListCat[lCat.Position].Id_Categoria;
             Cat.Categoriaa = ListCat[lCat.Position].Categoriaa;
         }
+        
+                
     }
 }

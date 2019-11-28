@@ -37,7 +37,7 @@ namespace Miramar_Health.Classes
             var comm = db.Conectar();
             try
             {
-                comm.CommandText = "select * from Categoria";
+                comm.CommandText = "select * from categoria";
                 var dr = comm.ExecuteReader();
                 while (dr.Read())
                 {

@@ -27,6 +27,7 @@
         />
     </LinearLayout>
     <Spinner
+        android:spinnerMode="dialog"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="80px"
@@ -55,17 +56,14 @@
     <EditText
         android:inputType="textMultiLine"
         android:layout_width="match_parent"
-        android:layout_height="32.5dp"
+        android:layout_height="69.0dp"
         android:background="#1E90FF"
         android:hint="Cobertura Utilizada"
         android:textColorHint="@android:color/black"
         android:layout_margin="15px"
         android:gravity="center"
         android:id="@+id/edt_cobertura_atendimento" />
-    <Spinner
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/spn_categoria_atendimento" />
+   
     <TextView
         android:text="Adicionar Imagem"
         android:layout_width="match_parent"
