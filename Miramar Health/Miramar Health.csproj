@@ -71,6 +71,7 @@
     <Compile Include="Classes\Categoria.cs" />
     <Compile Include="Classes\Endereco.cs" />
     <Compile Include="Classes\Paciente.cs" />
+    <Compile Include="Classes\RegistroAtendimento.cs" />
     <Compile Include="Classes\SessaoTecnico.cs" />
     <Compile Include="Classes\Tecnico.cs" />
     <Compile Include="Classes\TipodeFerida.cs" />
@@ -186,6 +187,11 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\activity_novasenha_tecnico.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\xml\file_paths.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

@@ -31,6 +31,7 @@ namespace Miramar_Health.Classes
         public List<TipodeFerida> GerarLista()
         {
             List<TipodeFerida> lista = new List<TipodeFerida>();
+            db = new Banco();
             var comm = db.Conectar();
             try
             {
