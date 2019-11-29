@@ -63,22 +63,31 @@
         android:layout_margin="15px"
         android:gravity="center"
         android:id="@+id/edt_cobertura_atendimento" />
-   
-    <TextView
-        android:text="Adicionar Imagem"
+
+    <Spinner
+        android:spinnerMode="dialog"
         android:layout_width="match_parent"
-        android:layout_height="32.5dp"
-        android:textColor="@android:color/black"
-        android:background="#1E90FF"
-        android:gravity="center"
-        android:layout_margin="15px"
-        android:id="@+id/textView2" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80px"
+        android:id="@+id/spn_tipodaferida_atendimento" />
+   
+
+    <Button
+        android:text="Tirar Foto"
+        android:textColor = "@android:color/white"
+        android:layout_width="348.0dp"
+        android:layout_height="44.3dp"
+        android:layout_margin = "10px"
+        android:id="@+id/btn_tirarfoto_atendimento"
+        android:backgroundTint="#fff28f18"
+        android:textStyle="bold" />
+
 
     <LinearLayout
-         android:orientation="vertical"
-         android:layout_width="match_parent"
-         android:layout_height="wrap_content"
-         android:gravity = "center">
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity = "center">
         <Button
             android:text="Finalizar"
             android:textColor = "@android:color/white"
@@ -89,7 +98,7 @@
             android:backgroundTint="#fff28f18"
             android:textStyle="bold" />
 
-        </LinearLayout>
+    </LinearLayout>
 
 
 </LinearLayout>

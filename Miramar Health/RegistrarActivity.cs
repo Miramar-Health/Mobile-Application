@@ -19,6 +19,8 @@ namespace Miramar_Health
         Categoria Cat;
         Tecnico tec;
         List<Categoria> ListCat;
+        Categoria categoria = new Categoria();
+        bool situacao = false;
         
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -43,19 +45,36 @@ namespace Miramar_Health
                 }
                 else
                 {
-                    if (edtSenha.Text == edtConfimarSenha.Text)
+                    if (edtNome.Text != string.Empty && edtCpf.Text != string.Empty && edtCoren.Text != string.Empty && edtEmail.Text != string.Empty && edtSenha.Text != string.Empty && edtCelular.Text != string.Empty)
                     {
+                        if (edtSenha.Text == edtConfimarSenha.Text)
+                        {
+                            tec = new Tecnico();
+                            tec.InserirTecnico(edtNome.Text, edtCpf.Text, edtCoren.Text, edtEmail.Text, edtSenha.Text, situacao, edtCelular.Text, categoria);
+                            if (tec.Id_Tecnico > 0)
+                            {
+                                Toast.MakeText(this, "Cadastrado com sucesso", ToastLength.Short).Show();
+                                StartActivity(typeof(MainActivity));
+                            }
+                            else
+                            {
+                                Toast.MakeText(this, "Não foi cadastrado", ToastLength.Short).Show();
+                            }
 
 
-                    
-                        Toast.MakeText(this, "Inserido", ToastLength.Short).Show();
-                        StartActivity(typeof(MainActivity));
-                        
+                        }
+                        else
+                        {
+                            Toast.MakeText(this, "As senhas precisam ser iguais", ToastLength.Short).Show();
+                        }
+
+
                     }
                     else
                     {
-                        Toast.MakeText(this, "Algo de errado não esta certo", ToastLength.Short).Show();
+                        Toast.MakeText(this, "Preencha todos os campos", ToastLength.Short).Show();
                     }
+                    
                 }
             };
 
@@ -84,6 +103,7 @@ namespace Miramar_Health
             Toast.MakeText(this, "Categoria : " + ListCat[lCat.Position].Categoriaa.ToString(), ToastLength.Long).Show();
             Cat.Id_Categoria = ListCat[lCat.Position].Id_Categoria;
             Cat.Categoriaa = ListCat[lCat.Position].Categoriaa;
+            categoria.Id_Categoria = ListCat[lCat.Position].Id_Categoria;
         }
         
                 

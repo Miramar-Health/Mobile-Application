@@ -73,6 +73,7 @@
     <Compile Include="Classes\Paciente.cs" />
     <Compile Include="Classes\SessaoTecnico.cs" />
     <Compile Include="Classes\Tecnico.cs" />
+    <Compile Include="Classes\TipodeFerida.cs" />
     <Compile Include="EditarPerfilActivity.cs" />
     <Compile Include="HomeActivity.cs" />
     <Compile Include="IniciarAtendimentoActivity.cs" />

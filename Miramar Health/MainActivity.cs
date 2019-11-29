@@ -84,14 +84,23 @@ namespace Miramar_Health
                 tec = new Tecnico();
                 if (tec.LogarTecnico(edtEmail.Text, edtSenha.Text))
                 {
-                    st = new SessaoTecnico();
-                    Toast.MakeText(this, "Tecnico : " + tec.Nome + " Logado com sucesso ", ToastLength.Long).Show();
-                    StartActivity(typeof(HomeActivity));
-                    st.Id = tec.Id_Tecnico;
-                    st.Sessao = true;
-                    st.Tecnico = tec.Nome;
-                    BancoLocal.SalvarSessaoTecnico(st);
-                    Finish();
+                    if (tec.Situacao == true)
+                    {
+                        st = new SessaoTecnico();
+                        Toast.MakeText(this, "Tecnico : " + tec.Nome + " Logado com sucesso ", ToastLength.Long).Show();
+                        StartActivity(typeof(HomeActivity));
+                        st.Id = tec.Id_Tecnico;
+                        st.Sessao = true;
+                        st.Tecnico = tec.Nome;
+                        BancoLocal.SalvarSessaoTecnico(st);
+                        Finish();
+
+                    }
+                    else
+                    {
+                        Toast.MakeText(this, "Entre em contato com o seu Enfermeiro(a) responsável ", ToastLength.Long).Show();
+                    }
+                    
                 }
                 else
                 {

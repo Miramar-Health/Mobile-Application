@@ -57,7 +57,7 @@ namespace Miramar_Health.Classes
                     comm.Parameters.Add("senha", MySqlDbType.VarChar).Value = senha;
                     comm.Parameters.Add("situacao", MySqlDbType.VarChar).Value = situacao;
                     comm.Parameters.Add("celular", MySqlDbType.VarChar).Value = celular;
-                    comm.Parameters.Add("categoria_id_categoria", MySqlDbType.Int32).Value = categoria;
+                    comm.Parameters.Add("id_categoria", MySqlDbType.Int32).Value = categoria.Id_Categoria;
                     Id_Tecnico = Convert.ToInt32(comm.ExecuteScalar());
                 }
 
@@ -112,8 +112,9 @@ namespace Miramar_Health.Classes
                     {
                         Id_Tecnico = dr.GetInt32(0);
                         Nome = dr.GetString(1);
-                        Email = dr.GetString(2);
-                        Senha = dr.GetString(3);
+                        Email = dr.GetString(4);
+                        Senha = dr.GetString(5);
+                        Situacao = dr.GetBoolean(6);
                         return true;
                     }
                     else
